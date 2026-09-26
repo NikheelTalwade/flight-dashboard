@@ -1,0 +1,22 @@
+<section class="kpi-section" aria-label="Flight KPIs">
+  <div class="kpi-grid">
+    @for (item of items; track item.label) {
+      <div class="card kpi-card kpi-card--{{ item.tone }}">
+        <div class="kpi-icon-wrap">
+          <div class="kpi-icon" aria-hidden="true">
+            @switch (item.icon) {
+              @case ('fleet') { <span>✈</span> }
+              @case ('active') { <span>◉</span> }
+              @case ('delayed') { <span>⏱</span> }
+              @case ('arrived') { <span>✓</span> }
+            }
+          </div>
+        </div>
+        <div class="kpi-copy">
+          <div class="kpi-label">{{ item.label }}</div>
+          <div class="kpi-value">{{ item.value }}</div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

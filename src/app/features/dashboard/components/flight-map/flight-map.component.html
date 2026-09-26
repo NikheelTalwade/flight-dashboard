@@ -1,0 +1,15 @@
+<section class="surface-panel map-panel" aria-label="Flight map">
+  <div class="panel-header">
+    <div><div class="eyebrow">Operations map</div><h3>Live route tracking</h3></div>
+    <div class="map-live-state"><span></span> Live</div>
+  </div>
+  <div class="map-frame">
+    <div #mapContainer class="map-container" aria-label="Flight map area"></div>
+    @if (loading) {
+      <div class="map-loading" role="status" aria-live="polite">
+        <span class="map-loading__plane" aria-hidden="true">✈</span>
+        <span>Updating flight map</span>
+      </div>
+    }
+  </div>
+</section>

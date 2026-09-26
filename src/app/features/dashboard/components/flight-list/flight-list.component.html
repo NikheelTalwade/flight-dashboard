@@ -1,0 +1,16 @@
+<section class="surface-panel list-panel" aria-label="Flight list">
+  <div class="panel-header"><div><div class="eyebrow">Visible flights</div><h3>{{ flights.length }} results</h3></div></div>
+  @if (flights.length === 0) {
+    <div class="empty-state-box" aria-live="polite"><div class="flight-empty-icon">✈</div><h4>No matching flights</h4><p>Try clearing a filter to restore the operations view.</p></div>
+  } @else {
+    <div class="flight-list scroll-list" role="list">
+      @for (flight of flights; track flight.id) {
+        <button type="button" class="list-item-card" [class.is-selected]="flight.id === selectedFlightId" (click)="selectFlight(flight.id)" role="listitem">
+          <div class="item-row"><span class="flight-code">{{ flight.flightNumber }}</span><span class="flight-status">{{ flight.status }}</span></div>
+          <div class="item-row item-meta"><span>{{ flight.callsign }}</span><span>{{ flight.progressPercent | number: '1.0-0' }}%</span></div>
+          <div class="item-meta route-line">{{ flight.origin.iata }} → {{ flight.destination.iata }}</div>
+        </button>
+      }
+    </div>
+  }
+</section>

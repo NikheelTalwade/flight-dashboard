@@ -1,0 +1,20 @@
+:host { display: block; }
+.details-panel { min-height: 240px; }
+.details-empty { display: grid; place-items: center; text-align: center; }
+.empty-title { font-weight: 800; font-size: 1.1rem; }
+.details-header { align-items: flex-start; }
+.details-header h3 { margin: 0.2rem 0 0; font-size: 1.4rem; letter-spacing: -0.05em; }
+.detail-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+.meta-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.meta-value { font-weight: 700; margin-top: 0.2rem; }
+.route-track { position: relative; height: 56px; margin: 1rem 0; }
+.route-track__line { position: absolute; inset: 50% 0 auto 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--success)); border-radius: 999px; transform: translateY(-50%); }
+.route-plane { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 28px; height: 28px; display: grid; place-items: center; font-size: 1.1rem; border-radius: 50%; background: rgba(255,255,255,0.88); border: 1px solid rgba(148,163,184,0.2); box-shadow: 0 8px 18px rgba(79,93,255,0.18); }
+.detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; margin-top: 0.75rem; }
+.detail-item { background: rgba(47,111,242,0.04); border: 1px solid var(--border); border-radius: 12px; padding: 0.8rem; }
+.detail-item strong { display: block; margin-top: 0.28rem; font-size: 0.88rem; }
+.status-badge { display: inline-flex; align-items: center; padding: 0.42rem 0.7rem; border-radius: 999px; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 800; }
+.status-badge--active { background: rgba(22,179,120,0.12); color: var(--success); }
+.status-badge--delayed { background: rgba(217,140,0,0.12); color: var(--amber); }
+.status-badge--arrived { background: rgba(47,111,242,0.12); color: var(--accent); }
+.status-badge--scheduled { background: rgba(90,111,140,0.12); color: var(--muted); }

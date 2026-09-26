@@ -1,0 +1,12 @@
+<section class="surface-panel filter-panel" aria-label="Flight filters">
+  <div class="panel-header">
+    <div><div class="eyebrow">Filters</div><h3>Search flights</h3></div>
+    <button class="btn btn-ghost" type="button" (click)="clearAll()">Clear All</button>
+  </div>
+  <form [formGroup]="form" class="filters-grid">
+    <label class="form-field"><span>Callsign</span><input formControlName="callsign" type="text" placeholder="Search callsign" /></label>
+    <label class="form-field"><span>Status</span><select formControlName="status"><option value="ALL">All</option><option value="ACTIVE">Active</option><option value="DELAYED">Delayed</option><option value="ARRIVED">Arrived</option><option value="SCHEDULED">Scheduled</option></select></label>
+    <label class="form-field"><span>Origin</span><select formControlName="origin"><option value="">All</option><option value="DEL">DEL</option><option value="BOM">BOM</option><option value="BLR">BLR</option><option value="MAA">MAA</option><option value="HYD">HYD</option><option value="CCU">CCU</option><option value="AMD">AMD</option><option value="COK">COK</option><option value="GOI">GOI</option><option value="PNQ">PNQ</option><option value="JAI">JAI</option></select></label>
+    <label class="form-field"><span>Destination</span><select formControlName="destination"><option value="">All</option><option value="DEL">DEL</option><option value="BOM">BOM</option><option value="BLR">BLR</option><option value="MAA">MAA</option><option value="HYD">HYD</option><option value="CCU">CCU</option><option value="AMD">AMD</option><option value="COK">COK</option><option value="GOI">GOI</option><option value="PNQ">PNQ</option><option value="JAI">JAI</option></select></label>
+  </form>
+</section>

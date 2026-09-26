@@ -1,0 +1,17 @@
+@if (!flight) {
+  <section class="surface-panel details-panel details-empty" aria-live="polite"><div class="empty-title">No flight selected</div><p>Select a flight from the map or list to review operations details.</p></section>
+} @else {
+  <section class="surface-panel details-panel" aria-live="polite">
+    <div class="panel-header details-header"><div><div class="eyebrow">Flight detail</div><h3>{{ flight.flightNumber }}</h3></div><span class="status-badge status-badge--{{ flight.status.toLowerCase() }}">{{ flight.status }}</span></div>
+    <div class="detail-summary"><div><div class="meta-label">Callsign</div><div class="meta-value">{{ flight.callsign }}</div></div><div><div class="meta-label">Aircraft</div><div class="meta-value">{{ flight.aircraftType }}</div></div></div>
+    <div class="route-track" aria-label="Flight progress route"><div class="route-track__line"></div><div class="route-plane" [style.left.%]="flight.progressPercent">✈</div></div>
+    <div class="detail-grid">
+      <div class="detail-item"><span class="meta-label">Origin</span><strong>{{ flight.origin.iata }} · {{ flight.origin.city }}</strong></div>
+      <div class="detail-item"><span class="meta-label">Destination</span><strong>{{ flight.destination.iata }} · {{ flight.destination.city }}</strong></div>
+      <div class="detail-item"><span class="meta-label">Departure</span><strong>{{ flight.estimatedDeparture | date: 'MMM d, HH:mm' }}</strong></div>
+      <div class="detail-item"><span class="meta-label">Arrival</span><strong>{{ flight.estimatedArrival | date: 'MMM d, HH:mm' }}</strong></div>
+      <div class="detail-item"><span class="meta-label">Progress</span><strong>{{ flight.progressPercent | number: '1.0-0' }}%</strong></div>
+      <div class="detail-item"><span class="meta-label">Status</span><strong>{{ flight.status }}</strong></div>
+    </div>
+  </section>
+}

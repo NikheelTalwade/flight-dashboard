@@ -1,0 +1,5 @@
+.empty-state { display: grid; place-items: center; gap: 0.5rem; text-align: center; min-height: 180px; padding: 1.25rem; }
+.empty-icon { width: 52px; height: 52px; display: grid; place-items: center; color: var(--accent); background: rgba(47,111,242,0.08); border-radius: 14px; }
+.empty-icon svg { width: 24px; height: 24px; }
+h3 { margin: 0; font-size: 1.2rem; }
+p { margin: 0; color: var(--muted); }
