@@ -110,4 +110,4 @@ See [DESIGN.md](DESIGN.md) for the workflow, architecture, visual system, respon
 
 ## Repository
 
-Repository: <add the GitHub repository URL after publishing>
+Repository: https://github.com/NikheelTalwade/flight-dashboard
